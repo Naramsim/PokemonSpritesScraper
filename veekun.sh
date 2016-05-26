@@ -26,7 +26,6 @@ dirs[23]="main-sprites/ruby-sapphire"
 dirs[24]="main-sprites/silver"
 dirs[25]="main-sprites/x-y"
 FAIL=0
-
 for i in {0..25} ;
 do
 	echo "GET http://veekun.com/dex/media/pokemon/${dirs[$i]}/" &
@@ -37,14 +36,10 @@ do
 echo $job
     wait $job || let "FAIL+=1"
 done
-
 echo $FAIL
-
 if [ "$FAIL" == "0" ];
 then
-echo "YAY!"
+echo "Done"
 else
-echo "FAIL! ($FAIL)"
+echo "Fail! ($FAIL)"
 fi
-
-echo "finish1"
