@@ -1,4 +1,14 @@
 #! /bin/sh
+while getopts "zam" flag
+do
+  case $flag in
+    z) zipSprites=true;;
+    a) getAudio=true;;
+    m) onlyMain=true;;
+  esac
+done
+
+
 dirs[0]="conquest"
 dirs[1]="cries"
 dirs[2]="cropped"
@@ -39,7 +49,13 @@ done
 echo $FAIL
 if [ "$FAIL" == "0" ];
 then
-echo "Done"
+echo 'Done'
 else
 echo "Fail! ($FAIL)"
+fi
+
+if [[ "$zipSprites" = "true" ]]; then
+	echo 'zipping'
+	zip -r -q sprites.zip dex/
+	echo 'Done'
 fi
