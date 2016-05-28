@@ -1,61 +1,74 @@
 #! /bin/sh
-while getopts "zam" flag
+onlyAudio=false
+onlyMain=false
+onlyOther=false
+while getopts "zamo" flag
 do
   case $flag in
     z) zipSprites=true;;
-    a) getAudio=true;;
+    a) onlyAudio=true;;
     m) onlyMain=true;;
+	o) onlyOther=true;;
   esac
 done
 
+if [[ "$onlyOther" = "false" && "$onlyAudio" = "false" && "$onlyMain" = "false" ]] ; then
+	echo "Use some options"
+	exit
+fi
+if [[ "$onlyOther" = "true" ]] ; then
+	dirs+=('conquest')
+	dirs+=('cropped')
+	dirs+=('dream-world')
+	dirs+=('footprints')
+	dirs+=('global-link')
+	dirs+=('icons')
+	dirs+=('mystery-dungeon')
+	dirs+=('overworld')
+	dirs+=('sugimori')
+	dirs+=('trozei')
+fi
+if [[ "$onlyMain" = "true" ]] ; then
+	dirs+=('main-sprites/yellow')
+	dirs+=('main-sprites/black-white')
+	dirs+=('main-sprites/crystal')
+	dirs+=('main-sprites/diamond-pearl')
+	dirs+=('main-sprites/emerald')
+	dirs+=('main-sprites/firered-leafgreen')
+	dirs+=('main-sprites/gold')
+	dirs+=('main-sprites/heartgold-soulsilver')
+	dirs+=('main-sprites/omegaruby-alphasapphire')
+	dirs+=('main-sprites/platinum')
+	dirs+=('main-sprites/red-blue')
+	dirs+=('main-sprites/red-green')
+	dirs+=('main-sprites/ruby-sapphire')
+	dirs+=('main-sprites/silver')
+	dirs+=('main-sprites/x-y')
+fi
+if [[ "$onlyAudio" = "true" ]] ; then
+	dirs+=('cries')
+fi
 
-dirs[0]="conquest"
-dirs[1]="cries"
-dirs[2]="cropped"
-dirs[3]="dream-world"
-dirs[4]="footprints"
-dirs[5]="global-link"
-dirs[6]="icons"
-dirs[7]="main-sprites/yellow"
-dirs[8]="mystery-dungeon"
-dirs[9]="overworld"
-dirs[10]="sugimori"
-dirs[11]="trozei"
-dirs[12]="main-sprites/black-white"
-dirs[13]="main-sprites/crystal"
-dirs[14]="main-sprites/diamond-pearl"
-dirs[15]="main-sprites/emerald"
-dirs[16]="main-sprites/firered-leafgreen"
-dirs[17]="main-sprites/gold"
-dirs[18]="main-sprites/heartgold-soulsilver"
-dirs[19]="main-sprites/omegaruby-alphasapphire"
-dirs[20]="main-sprites/platinum"
-dirs[21]="main-sprites/red-blue"
-dirs[22]="main-sprites/red-green"
-dirs[23]="main-sprites/ruby-sapphire"
-dirs[24]="main-sprites/silver"
-dirs[25]="main-sprites/x-y"
 FAIL=0
-for i in {0..25} ;
+for dir in "${dirs[@]}" ;
 do
-	echo "GET http://veekun.com/dex/media/pokemon/${dirs[$i]}/" &
-    wget --no-host-directories --no-cache -nc -c -U "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2600.0 Iron Safari/537.36" -r -l6 -A png,gif,svg -R html --no-parent --exclude-directories=../ http://veekun.com/dex/media/pokemon/${dirs[$i]}/ 1> NULL 2> NULL &
+	echo "GET http://veekun.com/dex/media/pokemon/$dir/" &
+    wget --no-host-directories --no-cache -nc -c -U "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2600.0 Iron Safari/537.36" -r -l6 -A png,gif,svg,ogg -R html --no-parent --exclude-directories=../ http://veekun.com/dex/media/pokemon/$dir/ 1> NULL 2> NULL &
 done
 for job in `jobs -p`
 do
 echo $job
     wait $job || let "FAIL+=1"
 done
-echo $FAIL
 if [ "$FAIL" == "0" ];
 then
 echo 'Done'
 else
-echo "Fail! ($FAIL)"
+echo "Failed ($FAIL) times"
 fi
 
 if [[ "$zipSprites" = "true" ]]; then
-	echo 'zipping'
+	echo 'Zipping'
 	zip -r -q sprites.zip dex/
 	echo 'Done'
 fi
