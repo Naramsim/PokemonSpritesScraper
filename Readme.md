@@ -1,5 +1,5 @@
 # Veekun Scraper
-Scrapes all Pokemon images. If you only want to download all the images just click [here](https://release)
+Scrapes all Pokemon images. If you only want to download all the images just click [here](https://github.com/Naramsim/VeekunSpritesScraper/releases/latest)
 
 ## Run
 ```
@@ -85,7 +85,7 @@ Will download all audio files and all pokemon from Nintendo versions.
 ##### Trozei
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/trozei.gif "Ghastly")
 
-### Audio cries
+### Audio cries (-a option)
 [Ghastly cry](http://veekun.com/dex/media/pokemon/cries/92.ogg)
 ## Info
 Mulithreaded, it will not take forever to finish :zap:
