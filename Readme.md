@@ -20,6 +20,10 @@ Scrapes other Pokemon image, by some authors like Sugimori, footprints and other
 ### -g
 Scrapes Pokemon gifs.
 
+### -f
+Scrapes Pokemon 60fps gifs.
+
+
 ### -z
 Creates a zip from the files downloaded
 
@@ -88,7 +92,7 @@ Will download all audio files and all pokemon from Nintendo versions.
 ##### Trozei
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/trozei.gif "Gastly")
 
-### Gifs
+### Gifs (-g option)
 ##### Front
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif.gif "Gastly")
 ##### Back
@@ -97,6 +101,17 @@ Will download all audio files and all pokemon from Nintendo versions.
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/git_s.gif "Gastly")
 ##### Shiny back
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/git_s_back.gif "Gastly")
+
+### 60 fps gifs (-f option)
+##### Front
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/60.gif "Gastly")
+##### Back
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/60_back.gif "Gastly")
+##### Shiny
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/60_s.gif "Gastly")
+##### Shiny back
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/60_s_back.gif "Gastly")
+
 
 ### Audio cries (-a option)
 [Gastly cry](http://veekun.com/dex/media/pokemon/cries/92.ogg)
