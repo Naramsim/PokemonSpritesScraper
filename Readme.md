@@ -1,5 +1,6 @@
 # Pokemon Sprites Scraper
 Scrapes all Pokemon images. If you only want to download all the images just click [here](https://github.com/Naramsim/PokemonSpritesScraper/releases/latest)
+
 Current sources: 
 * Veekun.com
 * Pokecheck.org
