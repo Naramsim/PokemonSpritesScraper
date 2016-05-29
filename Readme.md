@@ -9,16 +9,19 @@ git clone https://github.com/Naramsim/VeekunSpritesScraper.git
 
 ## Options
 ### -a
-Scrape audio files, those are pokemon cries. All files are .ogg
+Scrapes audio files, those are pokemon cries. All files are .ogg
 
 ### -m
-Scrape only main sprites, the one that are in any Pokemon version
+Scrapes only main sprites, the one that are in any Pokemon version
 
 ### -o
-Scrape other Pokemon image, by some authors like Sugimori or Trozei, footprints and other.
+Scrapes other Pokemon image, by some authors like Sugimori, footprints and other.
+
+### -g
+Scrapes Pokemon gifs.
 
 ### -z
-Create a zip from the files downloaded
+Creates a zip from the files downloaded
 
 ## Example
 ```
@@ -84,6 +87,16 @@ Will download all audio files and all pokemon from Nintendo versions.
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/sugimori.png "Gastly")
 ##### Trozei
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/trozei.gif "Gastly")
+
+### Gifs
+##### Front
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif.gif "Gastly")
+##### Back
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/git_back.gif "Gastly")
+##### Shiny
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif_s.gif "Gastly")
+##### Shiny back
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif_s_back.gif "Gastly")
 
 ### Audio cries (-a option)
 [Gastly cry](http://veekun.com/dex/media/pokemon/cries/92.ogg)

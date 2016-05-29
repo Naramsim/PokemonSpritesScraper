@@ -216,5 +216,6 @@ pip-log.txt
 .mr.developer.cfg
 
 dex
+gifs
 *.zip
 NULL
