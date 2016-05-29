@@ -92,11 +92,11 @@ Will download all audio files and all pokemon from Nintendo versions.
 ##### Front
 ![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif.gif "Gastly")
 ##### Back
-![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/git_back.gif "Gastly")
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif_back.gif "Gastly")
 ##### Shiny
-![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif_s.gif "Gastly")
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/git_s.gif "Gastly")
 ##### Shiny back
-![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/gif_s_back.gif "Gastly")
+![Poke](https://raw.githubusercontent.com/Naramsim/VeekunSpritesScraper/master/img/git_s_back.gif "Gastly")
 
 ### Audio cries (-a option)
 [Gastly cry](http://veekun.com/dex/media/pokemon/cries/92.ogg)
